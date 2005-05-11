@@ -17,6 +17,7 @@ Source1:	%{name}.conf
 URL:		http://www.horde.org/trean/
 Requires:	apache >= 1.3.33-2
 Requires:	apache(mod_access)
+# docs say it requires 3.1, but seems work in 3.0 too
 Requires:	horde >= 3.0
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -116,6 +117,15 @@ if [ "$1" = "0" ]; then
 			/etc/rc.d/init.d/httpd restart 1>&2
 		fi
 	fi
+fi
+
+
+if [ "$1" = 1 ]; then
+%banner %{name} -e <<EOF
+IMPORTANT:
+You need DataTree configured in Horde for Bookmarks to work. You can
+find horde_datatree.mysql.sql from Horde documentation.
+EOF
 fi
 
 %files
