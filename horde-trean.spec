@@ -46,7 +46,7 @@ bookmarks or how to import them into the new browser.
 
 The Horde Project writes web applications in PHP and releases them
 under the GNU General Public License. For more information (including
-help with MIMP) please visit <http://www.horde.org/>.
+help with Trean) please visit <http://www.horde.org/>.
 
 %prep
 %setup -q -n %{name}
