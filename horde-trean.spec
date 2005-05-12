@@ -4,6 +4,7 @@
 
 %include	/usr/lib/rpm/macros.php
 Summary:	Horde Bookmarks application
+Summary(pl):	Aplikacja zak³adek dla Horde
 Name:		trean
 Version:	0.1
 Release:	%{?_snap:0.%(echo %{_snap} | tr -d -).}%{_rel}
@@ -47,6 +48,23 @@ bookmarks or how to import them into the new browser.
 The Horde Project writes web applications in PHP and releases them
 under the GNU General Public License. For more information (including
 help with Trean) please visit <http://www.horde.org/>.
+
+%description -l pl
+Aplikacja Tream (zak³adki) pozwala na przechowywanie, organizowanie i
+zarz±dzanie, a co najwa¿niejsze, dostêp do zak³adek przegl±darki WWW
+on-line w jednym centralnym miejscu dostêpnym z ka¿dej przegl±darki.
+
+Poprzez przechowywanie w niej zak³adek mo¿na mieæ do nich dostêp z
+dowolnej przegl±darki na dowolnym komputerze maj±cej dostêp do
+aplikacji Horde. Oznacza to, ¿e mo¿na ³atwo dostaæ siê do zak³adek z
+wielu przegl±darek, wielu komputerów, ró¿nych miejsc itp. I po
+uaktualnieniu, zmianie lub przy testowaniu przegl±darek nie trzeba siê
+martwiæ co siê stanie z zak³adkami, albo jak zaimportowaæ je do nowej
+przegl±darki.
+
+Projekt Horde tworzy aplikacje WWW w PHP i wydaje je na licencji GNU
+Genral Public License. Wiêcej informacji (w³±cznie z pomoc± dla
+Treana) mo¿na znale¼æ na stronie <http://www.horde.org/>.
 
 %prep
 %setup -q -n %{name}
