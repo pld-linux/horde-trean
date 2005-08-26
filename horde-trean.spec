@@ -1,6 +1,6 @@
 
-%define	_snap	2005-05-11
-%define	_rel	1.1
+%define	_snap	2005-08-01
+%define	_rel	1
 
 %include	/usr/lib/rpm/macros.php
 Summary:	Horde Bookmarks application
@@ -10,13 +10,13 @@ Version:	0.1
 Release:	%{?_snap:0.%(echo %{_snap} | tr -d -).}%{_rel}
 License:	GPL
 Group:		Applications/WWW
-Source0:	http://ftp.horde.org/pub/snaps/%{_snap}/%{name}-HEAD-%{_snap}.tar.gz
+Source0:	ftp://ftp.horde.org/pub/snaps/%{_snap}/%{name}-HEAD-%{_snap}.tar.gz
+# Source0-md5:	95c431b130310ae9165d69fdbf7e6c99
 # NoSource0-md5:	20f5a96682d04444d48f9307ebb08515
-# don't put snapshots to df
-NoSource:	0
 Source1:	%{name}.conf
 URL:		http://www.horde.org/trean/
 BuildRequires:	rpmbuild(macros) >= 1.226
+BuildRequires:	tar >= 1:1.15.1
 Requires:	apache >= 1.3.33-2
 Requires:	apache(mod_access)
 # docs say it requires 3.1, but seems work in 3.0 too
@@ -35,14 +35,14 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 The Trean (Bookmarks) application allows you to store, organize and
 manage, and most importantly access your web browser bookmarks on-line
-and in one central place accessible from any web browser. 
+and in one central place accessible from any web browser.
 
 By storing your bookmarks here, you can access them from any browser
 on any machine that can access the Horde applications. This means you
 can easily access your bookmarks from multiple browsers, multiple
 machines, remote locations, etc. And if you upgrade, switch, or test
 out browsers, you don't have to worry about what happens to your
-bookmarks or how to import them into the new browser. 
+bookmarks or how to import them into the new browser.
 
 The Horde Project writes web applications in PHP and releases them
 under the GNU General Public License. For more information (including
@@ -66,7 +66,8 @@ Genral Public License. Wiêcej informacji (w³±cznie z pomoc± dla
 Treana) mo¿na znale¼æ na stronie <http://www.horde.org/>.
 
 %prep
-%setup -q -n %{name}
+%setup -q -c -T -n %{name}-%{_snap}
+tar zxf %{SOURCE0} --strip-components=1
 
 rm -f config/.htaccess
 
