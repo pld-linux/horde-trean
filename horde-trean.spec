@@ -1,12 +1,12 @@
 %define	_hordeapp trean
 %define	_snap	2005-09-03
 #define	_rc		rc1
-%define	_rel	2.1
+%define	_rel	0.1
 #
 %include	/usr/lib/rpm/macros.php
 Summary:	Horde Bookmarks application
 Summary(pl):	Aplikacja zak³adek dla Horde
-Name:		%{_hordeapp}
+Name:		horde-%{_hordeapp}
 Version:	0.1
 Release:	%{?_rc:0.%{_rc}.}%{?_snap:0.%(echo %{_snap} | tr -d -).}%{_rel}
 License:	BSD
@@ -22,6 +22,7 @@ Requires:	apache >= 1.3.33-2
 Requires:	apache(mod_access)
 # docs say it requires 3.1, but seems work in 3.0 too
 Requires:	horde >= 3.0
+Obsoletes:	%{_hordeapp}
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
