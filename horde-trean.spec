@@ -1,7 +1,7 @@
 %define	_hordeapp trean
-%define	_snap	2005-09-03
+%define	_snap	2006-01-08
 #define	_rc		rc1
-%define	_rel	0.8
+%define	_rel	0.1
 #
 %include	/usr/lib/rpm/macros.php
 Summary:	Horde Bookmarks application
@@ -12,7 +12,7 @@ Release:	%{?_rc:0.%{_rc}.}%{?_snap:0.%(echo %{_snap} | tr -d -).}%{_rel}
 License:	BSD
 Group:		Applications/WWW
 Source0:	ftp://ftp.horde.org/pub/snaps/%{_snap}/%{_hordeapp}-HEAD-%{_snap}.tar.gz
-# Source0-md5:	f2d09422cd0059f5e74bf4485cb84db4
+# Source0-md5:	cdf14edc265852453c3c1069f89347e7
 Source1:	%{_hordeapp}.conf
 URL:		http://www.horde.org/trean/
 BuildRequires:	rpm-php-pearprov >= 4.0.2-98
