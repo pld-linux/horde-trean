@@ -5,7 +5,7 @@
 #
 %include	/usr/lib/rpm/macros.php
 Summary:	Horde Bookmarks application
-Summary(pl):	Aplikacja zak³adek dla Horde
+Summary(pl.UTF-8):   Aplikacja zakÅ‚adek dla Horde
 Name:		horde-%{_hordeapp}
 Version:	0.1
 Release:	%{?_rc:0.%{_rc}.}%{?_snap:0.%(echo %{_snap} | tr -d -).}%{_rel}
@@ -46,18 +46,18 @@ machines, remote locations, etc. And if you upgrade, switch, or test
 out browsers, you don't have to worry about what happens to your
 bookmarks or how to import them into the new browser.
 
-%description -l pl
-Aplikacja Tream (zak³adki) pozwala na przechowywanie, organizowanie i
-zarz±dzanie, a co najwa¿niejsze, dostêp do zak³adek przegl±darki WWW
-on-line w jednym centralnym miejscu dostêpnym z ka¿dej przegl±darki.
+%description -l pl.UTF-8
+Aplikacja Tream (zakÅ‚adki) pozwala na przechowywanie, organizowanie i
+zarzÄ…dzanie, a co najwaÅ¼niejsze, dostÄ™p do zakÅ‚adek przeglÄ…darki WWW
+on-line w jednym centralnym miejscu dostÄ™pnym z kaÅ¼dej przeglÄ…darki.
 
-Poprzez przechowywanie w niej zak³adek mo¿na mieæ do nich dostêp z
-dowolnej przegl±darki na dowolnym komputerze maj±cej dostêp do
-aplikacji Horde. Oznacza to, ¿e mo¿na ³atwo dostaæ siê do zak³adek z
-wielu przegl±darek, wielu komputerów, ró¿nych miejsc itp. I po
-uaktualnieniu, zmianie lub przy testowaniu przegl±darek nie trzeba siê
-martwiæ co siê stanie z zak³adkami, albo jak zaimportowaæ je do nowej
-przegl±darki.
+Poprzez przechowywanie w niej zakÅ‚adek moÅ¼na mieÄ‡ do nich dostÄ™p z
+dowolnej przeglÄ…darki na dowolnym komputerze majÄ…cej dostÄ™p do
+aplikacji Horde. Oznacza to, Å¼e moÅ¼na Å‚atwo dostaÄ‡ siÄ™ do zakÅ‚adek z
+wielu przeglÄ…darek, wielu komputerÃ³w, rÃ³Å¼nych miejsc itp. I po
+uaktualnieniu, zmianie lub przy testowaniu przeglÄ…darek nie trzeba siÄ™
+martwiÄ‡ co siÄ™ stanie z zakÅ‚adkami, albo jak zaimportowaÄ‡ je do nowej
+przeglÄ…darki.
 
 %prep
 %setup -q -c -T -n %{?_snap:%{_hordeapp}-%{_snap}}%{!?_snap:%{_hordeapp}-%{version}%{?_rc:-%{_rc}}}
