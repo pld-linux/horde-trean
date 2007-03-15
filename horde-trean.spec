@@ -1,5 +1,5 @@
 %define	_hordeapp trean
-%define	_snap	2006-01-08
+%define	_snap	2007-03-15
 #define	_rc		rc1
 %define	_rel	0.1
 #
@@ -12,7 +12,7 @@ Release:	%{?_rc:0.%{_rc}.}%{?_snap:0.%(echo %{_snap} | tr -d -).}%{_rel}
 License:	BSD
 Group:		Applications/WWW
 Source0:	ftp://ftp.horde.org/pub/snaps/%{_snap}/%{_hordeapp}-HEAD-%{_snap}.tar.gz
-# Source0-md5:	cdf14edc265852453c3c1069f89347e7
+# Source0-md5:	66a06c6d98af24319c2f5566d160bb06
 Source1:	%{_hordeapp}.conf
 URL:		http://www.horde.org/trean/
 BuildRequires:	rpm-php-pearprov >= 4.0.2-98
