@@ -3,7 +3,6 @@
 #define	_rc		rc1
 %define	_rel	0.1
 #
-%include	/usr/lib/rpm/macros.php
 Summary:	Horde Bookmarks application
 Summary(pl.UTF-8):	Aplikacja zakładek dla Horde
 Name:		horde-%{_hordeapp}
